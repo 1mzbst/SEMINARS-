@@ -32,11 +32,11 @@
 //     current++;
 // }
 //Задача 4
-Console.WriteLine("Input tree-digit number");
-int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input tree-digit number");
+// int num = Convert.ToInt32(Console.ReadLine());
 
-int result = num % 10;
+// int result = num % 10;
 
-Console.WriteLine($"Last digit of {num} is {result}");
+// Console.WriteLine($"Last digit of {num} is {result}");
 
 
