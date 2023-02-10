@@ -21,13 +21,22 @@
 //}
 //Задача 3
 
-Console.WriteLine("Input number");
+// Console.WriteLine("Input number");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int current = num * (-1);
+
+// while (current <= num)
+// {
+//     Console.Write(current + " ");
+//     current++;
+// }
+//Задача 4
+Console.WriteLine("Input tree-digit number");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int current = num * (-1);
+int result = num % 10;
 
-while (current <= num)
-{
-    Console.Write(current + " ");
-    current++;
-}
+Console.WriteLine($"Last digit of {num} is {result}");
+
+
