@@ -21,7 +21,7 @@
 //}
 //Задача 3
 
-onsole.WriteLine("Input number");
+Сonsole.WriteLine("Input number");
 int num = Convert.ToInt32(Console.ReadLine());
 
 int current = num * (-1);
