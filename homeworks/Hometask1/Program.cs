@@ -4,6 +4,7 @@
 // int num1 = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Введите второе число");
 // int num2 = Convert.ToInt32(Console.ReadLine());
+//
 // if (num1 > num2)
 // {
 //     Console.WriteLine($"Первое число ({num1}) больше второго числа({num2}).");
@@ -41,3 +42,9 @@
 // {
 //     Console.WriteLine($"Победитель - число под номером три!({num3})");
 // }
+
+//Задача3
+
+Console.WriteLine("Число, пожалуйста.");
+int num1 = Convert.ToInt32(Console.ReadLine());
+int div = num1 % 2;
