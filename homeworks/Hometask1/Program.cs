@@ -48,3 +48,22 @@
 Console.WriteLine("Число, пожалуйста.");
 int num1 = Convert.ToInt32(Console.ReadLine());
 int div = num1 % 2;
+
+//Задача4
+
+// Console.WriteLine("Введите конечное число.");
+// int numN = Convert.ToInt32(Console.ReadLine());
+// int multipleNum = 2;
+
+// if (numN <= 1)
+// {
+//     Console.WriteLine(multipleNum = 0);
+// }
+// else
+// {
+//     while (multipleNum <= numN)
+//     {
+//         Console.Write($"{multipleNum} ");
+//         multipleNum = multipleNum + 2;
+//     }
+// }
