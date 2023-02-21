@@ -26,7 +26,7 @@
 
 // int AnyNum = Convert.ToInt32(Console.ReadLine());
 
-// double DThrdNum = (AnyNum * 0.01) % 10;
+// double DThrdNum = (AnyNum / 10) % 10;
 
 // int ThrdNum = Convert.ToInt32(DThrdNum);
 
