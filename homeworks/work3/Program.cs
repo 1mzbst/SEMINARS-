@@ -11,18 +11,32 @@
 
 // РЕШЕНИЕ:
 
-Console.WriteLine("Enter the number"); // polydrome - Poly
-int Number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the number"); // polydrome - Poly
+// int Number = Convert.ToInt32(Console.ReadLine());
+// int FRem = 0;
+// int SRem = 0;
+// int FNum = 0;
+// int SNum = 0;
+// 
+// int PolyFunc(int FRem, int SRem, int FNum, int SNum)
+// {
+//     FRem = Number % 10;
+//     SRem = (Number / 10) % 10;
+//     FNum = Number / 10000;
+//     SNum = (Number / 1000) % 10;
+//     if (FRem == FNum && SRem == SNum)
+//     {
+//         Console.WriteLine($"Wow! The {Number} is the POLYDROME!");
+//     }
+//     else
+//     {
+//         Console.WriteLine("Boooooriiiiing....");
+//     }
 
-int PolyFunc(int Number)
-{
-    Frem = Number % 10 + Number % 100;
-    // Srem = Frem % 100;
-    // Number * 0.1;
-    return (Console.WriteLine(Frem));
-}
-PolyFunc(Number);
+//     return 0;
+// }
 
+// PolyFunc(FRem, SRem, FNum, SNum);
 
 // ______________________________________________________________________________________________________________________________
 
@@ -36,22 +50,22 @@ PolyFunc(Number);
 
 // РЕШЕНИЕ:
 
-// double Length(double x1, double x2, double y1, double y2, double z1, double z2)
+// int Length(int x1, int x2, int y1, int y2, int z1, int z2)
 // {
 //     return Math.Round(Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2 - z1, 2)), 2);
 // }
 // Console.WriteLine("Enter the coordinate x1 of point A");
-// double x1 = Convert.ToDouble(Console.ReadLine());
+// int x1 = Convert.Toint(Console.ReadLine());
 // Console.WriteLine("Enter the coordinate y1 of point A");
-// double y1 = Convert.ToDouble(Console.ReadLine());
+// int y1 = Convert.Toint(Console.ReadLine());
 // Console.WriteLine("Enter the coordinate z1 of point A");
-// double z1 = Convert.ToDouble(Console.ReadLine());
+// int z1 = Convert.Toint(Console.ReadLine());
 // Console.WriteLine("Enter the coordinate x2 of point B");
-// double x2 = Convert.ToDouble(Console.ReadLine());
+// int x2 = Convert.Toint(Console.ReadLine());
 // Console.WriteLine("Enter the coordinate y2 of point B");
-// double y2 = Convert.ToDouble(Console.ReadLine());
+// int y2 = Convert.Toint(Console.ReadLine());
 // Console.WriteLine("Enter the coordinate z2 of point B");
-// double z2 = Convert.ToDouble(Console.ReadLine());
+// int z2 = Convert.Toint(Console.ReadLine());
 
 // Console.WriteLine($"The distance beetwean points A and B is {Length(x1, x2, y1, y2, z1, z2)} ");
 
