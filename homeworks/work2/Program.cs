@@ -23,21 +23,30 @@
 //РЕШЕНИЕ:
 
 // Console.WriteLine("Hey there, engage the any number! ");
-
 // int AnyNum = Convert.ToInt32(Console.ReadLine());
+// int AnyNumBU = AnyNum; // The backup of AnyNum. For Console. 
+// int ThirdNum = 0;
 
-// double DThrdNum = (AnyNum / 10) % 10;
 
-// int ThrdNum = Convert.ToInt32(DThrdNum);
-
-// if (ThrdNum < 100)
+// int FindThirdNum(int AnyNum, int ThirdNum)
 // {
-//     Console.WriteLine(ThrdNum);
+//     if (AnyNum < 100)
+//     {
+//         Console.WriteLine("The third number is absent today.");
+//         return AnyNum;
+//     }
+
+//     while (AnyNum > 1000)
+//     {
+//         AnyNum /= 10;
+//     }
+//     Console.WriteLine($"The third number of {AnyNumBU} is {ThirdNum = AnyNum % 10}.");
+
+//     return ThirdNum;
+
 // }
-// else
-// {
-//     Console.WriteLine("The third number is empsent, sorry...");
-// }
+// FindThirdNum(AnyNum, ThirdNum);
+
 // ______________________________________________________________________________________________________________________________________
 
 // ЗАДАЧА 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
