@@ -7,23 +7,24 @@
 
 // РЕШЕНИЕ:
 
-Console.WriteLine("Enter the number.");
-int num = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Enter the power.");
-int pow = Convert.ToDouble(Console.ReadLine());
-int count = 0;
-double NumInPow(double num, double pow, int count)
-{
-    while (count != pow)
-    {
-        numPow = num * num;
-        count++;
-    }
+// Console.WriteLine("Enter the number."); // num
+// double num = Convert.ToDouble(Console.ReadLine());
+// double numBU = num; // back up for console;
+// Console.WriteLine("Enter the power."); // pow
+// double pow = Convert.ToDouble(Console.ReadLine());
 
-    // return result;
-}
+// double numPow = 1;
 
-NumDeg(num, deg);
+// double NumInPow(double num, double pow)
+// {
+//     for (int i = 0; i < pow; i++)
+//     {
+//         numPow = numPow * num;
+//     }
+//     Console.WriteLine($"The number {num} in the {pow}th power is {numPow}.");
+//     return numPow;
+// }
+// NumInPow(num, pow);
 
 // ___________________________________________________________________________________________________________________
 
