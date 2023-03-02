@@ -30,9 +30,7 @@ int FindEvenNumber(int[] array)
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (i % 2 == 0) count = array[i + 1];
-        else count = coun
-
+        if (array[i] % 2 == 0) count += 1;
     }
     Console.WriteLine(count);
     return count;
@@ -41,8 +39,9 @@ int FindEvenNumber(int[] array)
 Console.WriteLine("Input array size");
 int size = Convert.ToInt32(Console.ReadLine());
 // ShowArray(CreatRandomArray(size, 100, 999));
-ShowArray(CreatRandomArray(size, 100, 999));
-FindEvenNumber(CreatRandomArray(size, 100, 999));
+int[] MyArray = CreatRandomArray(size, 9, 100);
+ShowArray(MyArray);
+FindEvenNumber(MyArray);
 
 
 
