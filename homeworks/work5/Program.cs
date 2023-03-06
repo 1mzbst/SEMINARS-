@@ -100,52 +100,58 @@
 
 // [3 7 22 2 78] -> 76
 
-// Решение. НЕ ДОДЕЛАНО!!!!
+// Решение.
 
-// double[] CreatRandomArray(int size, double minValue, double maxValue)
-// {
-//     double[] array = new double[size];
-//     for (int i = 0; i < size; i++)
-//     {
-//         array[i] = Math.Round(minValue + new Random().NextDouble() * (maxValue + minValue), 4);
+double[] CreatRandomArray(int size, double minValue, double maxValue)
+{
+    double[] array = new double[size];
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = Math.Round(minValue + new Random().NextDouble() * (maxValue + minValue), 4);
 
-//     }
-//     return array;
-// }
-// void ShowArray(double[] array)
-// {
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         Console.Write(array[i] + " ");
-//     }
-//     Console.WriteLine();
-// }
+    }
+    return array;
+}
+void ShowArray(double[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
 
-// void FindMinMax(double[] array)
-// {
-//     double maxNum = 0;
+void FindMinMax(double[] array)
+{
+    double minNum = array[0];
+    double maxNum = array[0];
+    // double firstIndex = array[0];
 
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         if (array[i] >= maxNum) maxNum = array[i];
-
-//     }
-//     Console.WriteLine(maxNum);
-
-// }
-
-// Console.WriteLine("Input array size");
-// int size = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input minimal value of array element");
-// double minValue = Convert.ToDouble(Console.ReadLine());
-// Console.WriteLine("Input maximal value of array element");
-// double maxValue = Convert.ToDouble(Console.ReadLine());
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] >= maxNum) maxNum = array[i];
+        if (minNum >= array[i]) minNum = array[i];
+    }
+    Console.WriteLine();
+    Console.WriteLine($"The minimal digit of the array is {minNum} and the max digit is {maxNum}.");
+    // Console.WriteLine();
+    // Console.WriteLine(minNum);
 
 
+}
 
-// double[] MyArray = CreatRandomArray(size, minValue, maxValue);
-// ShowArray(MyArray);
-// FindMinMax(MyArray);
+Console.WriteLine("Input array size");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input minimal value of array element");
+double minValue = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Input maximal value of array element");
+double maxValue = Convert.ToDouble(Console.ReadLine());
+
+
+
+double[] MyArray = CreatRandomArray(size, minValue, maxValue);
+ShowArray(MyArray);
+FindMinMax(MyArray);
 
 
 // _________________________________________________________________________________________________
