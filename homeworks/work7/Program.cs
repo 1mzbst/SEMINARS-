@@ -70,20 +70,20 @@
 
 //Решение.
 
-int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
-{
-    int[,] newArray = new int[rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+// int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+// {
+//     int[,] newArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
 
-        }
-    }
-    return newArray;
+//         }
+//     }
+//     return newArray;
 
-}
+// }
 
 // void Show2DArray(int[,] array)
 // {
@@ -98,21 +98,12 @@ int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
 //     Console.WriteLine();
 // }
 
-int[,] CheckNum(int entNum, int[,] array)
-{
-    int rowNum = 0;
-    int columNum = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (array[i, j] == entNum) Console.WriteLine(array[i, j]);
-            else Console.WriteLine("There is no number in array.");
-        }
-    }
-    return array;
-}
-
+// int[,] CheckNum(int rowPos, int columPos, int[,] array)
+// {
+//     if (rowPos > array.GetLength(0) || columPos > array.GetLongLength(1)) Console.WriteLine($"The index in the sector ({rowPos}, {columPos}) is absened.");
+//     else Console.WriteLine($"The index in the sector ({rowPos}, {columPos}) is {array[rowPos, columPos]}.");
+//     return array;
+// }
 
 // Console.WriteLine("Input number of rows: ");
 // int rows = Convert.ToInt32(Console.ReadLine());
@@ -122,15 +113,18 @@ int[,] CheckNum(int entNum, int[,] array)
 // int minValue = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Input max value of array element");
 // int maxValue = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input number of : ");
-// int entNum = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
 
-// CheckNum(entNum, Create2DRandomArray);
+// int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+// Show2DArray(MyArray);
 
-// int[,] array = Create2DRandomArray(columns, rows, maxValue, maxValue);
+// Console.WriteLine("Input position of row: ");
+// int rowPos = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input position of colum: ");
+// int columPos = Convert.ToInt32(Console.ReadLine());
 
-// Show2DArray(array);
-// Show2DArray(Create2DRandomArray(columns, rows, minValue, maxValue));
+
+// CheckNum(rowPos, columPos, MyArray);
 
 // ______________________________________________________________________________________________________________________________
 
