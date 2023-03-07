@@ -17,7 +17,7 @@
 //     {
 //         for (int j = 0; j < columns; j++)
 //         {
-//             newArray[i, j] = Math.Round(minValue + new Random().NextDouble() * (maxValue + minValue), 4);
+//             newArray[i, j] = Math.Round(-minValue + new Random().NextDouble() * (maxValue + minValue), 4);
 //             //new Random().Next(minValue, maxValue + 1);
 
 //         }
@@ -46,7 +46,7 @@
 // double minValue = Convert.ToDouble(Console.ReadLine());
 // Console.WriteLine("Input max value of array element");
 // double maxValue = Convert.ToDouble(Console.ReadLine());
-
+// Console.WriteLine();
 // double[,] array = Create2DRandomArray(columns, rows, maxValue, maxValue);
 // Show2DArray(array);
 
@@ -69,6 +69,68 @@
 // 17 -> такого числа в массиве нет
 
 //Решение.
+
+int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+{
+    int[,] newArray = new int[rows, columns];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+
+        }
+    }
+    return newArray;
+
+}
+
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+int[,] CheckNum(int entNum, int[,] array)
+{
+    int rowNum = 0;
+    int columNum = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            if (array[i, j] == entNum) Console.WriteLine(array[i, j]);
+            else Console.WriteLine("There is no number in array.");
+        }
+    }
+    return array;
+}
+
+
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of : ");
+// int entNum = Convert.ToInt32(Console.ReadLine());
+
+// CheckNum(entNum, Create2DRandomArray);
+
+// int[,] array = Create2DRandomArray(columns, rows, maxValue, maxValue);
+
+// Show2DArray(array);
+// Show2DArray(Create2DRandomArray(columns, rows, minValue, maxValue));
 
 // ______________________________________________________________________________________________________________________________
 

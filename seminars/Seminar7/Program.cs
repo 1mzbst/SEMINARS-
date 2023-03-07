@@ -50,37 +50,37 @@
 
 //Решение
 
-// int[,] Create2DRandomArray(int columns, int rows)
-// {
-//     int[,] newArray = new int[rows, columns];
-//     for (int i = 0; i < rows; i++)
-//     {
-//         for (int j = 0; j < columns; j++)
-//         {
-//             newArray[i, j] = i + j;
-//         }
-//     }
-//     return newArray;
-// }
+int[,] Create2DRandomArray(int columns, int rows)
+{
+    int[,] newArray = new int[rows, columns];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            newArray[i, j] = i + j;
+        }
+    }
+    return newArray;
+}
 
-// void Show2DArray(int[,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             Console.Write(array[i, j] + " ");
-//         }
-//         Console.WriteLine();
-//     }
-//     Console.WriteLine();
-// }
-// Console.WriteLine("Input number of rows: ");
-// int rows = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input number of colums: ");
-// int columns = Convert.ToInt32(Console.ReadLine());
+void Show2DArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+Console.WriteLine("Input number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input number of colums: ");
+int columns = Convert.ToInt32(Console.ReadLine());
 
-// Show2DArray(Create2DRandomArray(columns, rows));
+Show2DArray(Create2DRandomArray(columns, rows));
 
 // _____________________________________________________________________________________________________________________________
 
@@ -163,57 +163,57 @@
 
 //Решение
 
-int[,] Create2DArray(int columns, int rows)
-{
-    int[,] newArray = new int[rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            newArray[i, j] = i + j;
-        }
-    }
-    return newArray;
-}
+// int[,] Create2DArray(int columns, int rows)
+// {
+//     int[,] newArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = i + j;
+//         }
+//     }
+//     return newArray;
+// }
 
-void Show2DArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
-int FindMainDiagonal(int[,] array)
-{
-    int sum = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
+// int FindMainDiagonal(int[,] array)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
 
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == j) sum = array[i, j] + sum;
-        }
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i == j) sum = array[i, j] + sum;
+//         }
 
-    }
-    return sum;
+//     }
+//     return sum;
 
-}
+// }
 
-Console.WriteLine("Input number of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number of colums: ");
-int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
 
-int[,] MyArray = Create2DArray(columns, rows);
-Show2DArray(MyArray);
-Console.WriteLine();
-// FindMainDiagonal(MyArray); так нельзя
-Console.WriteLine(FindMainDiagonal(MyArray));
+// int[,] MyArray = Create2DArray(columns, rows);
+// Show2DArray(MyArray);
+// Console.WriteLine();
+// // FindMainDiagonal(MyArray); так нельзя
+// Console.WriteLine(FindMainDiagonal(MyArray));
 
 // _____________________________________________________________________________________________________________________________
