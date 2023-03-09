@@ -30,13 +30,12 @@
 //     {
 //         if (array[i] % 2 == 0) count += 1;
 //     }
-//     Console.WriteLine(count);
+//     Console.WriteLine($" The count of even numbers is {count}.");
 //     return count;
 // }
 
 // Console.WriteLine("Input array size");
 // int size = Convert.ToInt32(Console.ReadLine());
-// // ShowArray(CreatRandomArray(size, 100, 999));
 // int[] MyArray = CreatRandomArray(size, 100, 999);
 // ShowArray(MyArray);
 // FindEvenNumber(MyArray);
@@ -78,7 +77,7 @@
 //     {
 //         if (i % 2 != 0) sum += array[i];
 //     }
-//     Console.WriteLine(sum);
+//     Console.WriteLine($"The sum of odd elements is {sum}.");
 // }
 
 // Console.WriteLine("Input array size");
@@ -100,61 +99,64 @@
 
 // [3 7 22 2 78] -> 76
 
-// Решение
+// Решение.
 
-double[] CreatRandomArray(int size, double minValue, double maxValue)
-{
-    double[] array = new double[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().NextDouble(minValue, maxValue + 1);
-    }
-    return array;
-}
-void ShowArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
+// double[] CreatRandomArray(int size, double minValue, double maxValue)
+// {
+//     double[] array = new double[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = Math.Round(minValue + new Random().NextDouble() * (maxValue + minValue), 4);
 
-void FindSum(int[] array)
-{
-    // int count = 0;
-    int sum = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (i % 2 != 0) sum += array[i];
-        }
-    Console.WriteLine(sum);
-}
+//     }
+//     return array;
+// }
+// void ShowArray(double[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void FindMinMax(double[] array)
+// {
+//     double minNum = array[0];
+//     double maxNum = array[0];
+//    
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] >= maxNum) maxNum = array[i];
+//         if (minNum >= array[i]) minNum = array[i];
+//     }
+//     Console.WriteLine();
+//     Console.WriteLine($"The minimal digit of the array is {minNum} and the max digit is {maxNum}.");
+//    
+
+// void FindSum(int[] array)
+// {
+//     // int count = 0;
+//     int sum = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (i % 2 != 0) sum += array[i];
+//     }
+//     Console.WriteLine(sum);
+// }
 
 // Console.WriteLine("Input array size");
 // int size = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Input minimal value of array element");
-// int minValue = Convert.ToInt32(Console.ReadLine());
+// double minValue = Convert.ToDouble(Console.ReadLine());
 // Console.WriteLine("Input maximal value of array element");
-// int maxValue = Convert.ToInt32(Console.ReadLine());
+// double maxValue = Convert.ToDouble(Console.ReadLine());
 
 
-// int[] MyArray = CreatRandomArray(size, minValue, maxValue);
+
+// double[] MyArray = CreatRandomArray(size, minValue, maxValue);
 // ShowArray(MyArray);
-// FindSum(MyArray);
-
-
-// _________________________________________________________________________________________________
-
-// int arrayFindEN = FindEvenNumber(CreatRandomArray(size, 100, 999));
-// ShowArray()
-// ShowArray(CreatRandomArray(size, 100, 999));
-
-// Console.WriteLine("Input minimal value of array element");
-// int minValue = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input maximal value of array element");
-// int maxValue = Convert.ToInt32(Console.ReadLine());
-
+// FindMinMax(MyArray);
 
 // _________________________________________________________________________________________________________________________
 
