@@ -127,7 +127,7 @@ void FindSum(int[] array)
     for (int i = 0; i < array.Length; i++)
     {
         if (i % 2 != 0) sum += array[i];
-    }
+        }
     Console.WriteLine(sum);
 }
 
@@ -157,3 +157,4 @@ void FindSum(int[] array)
 
 
 // _________________________________________________________________________________________________________________________
+
