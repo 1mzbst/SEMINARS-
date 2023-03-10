@@ -138,4 +138,74 @@
 
 //Решение.
 
+// int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+// {
+//     int[,] newArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+
+//         }
+//     }
+//     return newArray;
+
+// }
+
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// int[,] FindSum(int[,] array)
+// {
+
+//     // double temp0 = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         double temp = 0;
+//         // double tempdiv = temp / array.GetLength(0);
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             temp = array[j, i] + temp;
+//             Console.Write(temp + " ");
+//             // Console.WriteLine($"(is{tempdiv})");
+//             // if (i != (array.GetLength(0) - 1))
+//             // {
+//             //     temp0 = temp / (array.GetLength(0) - 1);
+//             //     Console.Write(temp0 + " ");
+//             // }
+//         }
+//         temp = Math.Round(temp / array.GetLength(0), 2);
+//         // Math.Round(temp,2);
+//         Console.WriteLine($" The arithmetic mean {i} row is {temp}!");
+//     }
+//     return array;
+// }
+
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+// Show2DArray(MyArray);
+// FindSum(MyArray);
+
+
+
 // ______________________________________________________________________________________________________________________________
