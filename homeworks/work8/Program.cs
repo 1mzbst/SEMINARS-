@@ -130,111 +130,99 @@
 
 // Решение
 
-int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
-{
-    int[,] newArray = new int[rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+// int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+// {
+//     int[,] newArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
 
-        }
-    }
-    return newArray;
+//         }
+//     }
+//     return newArray;
 
-}
+// }
 
-void Show2DArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
-// ПРОВЕРКА СОРТИРОВКИ СТРОКИ:
-void ShowArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
+// // ПРОВЕРКА СОРТИРОВКИ СТРОКИ:
+// // void ShowArray(int[] array)
+// // {
+// //     for (int i = 0; i < array.Length; i++)
+// //     {
+// //         Console.Write(array[i] + " ");
+// //     }
+// //     Console.WriteLine();
+// // }
 
 
-int MinValueSort(int[] array)
-{
-    int temp = 0;
-    for (int k = 0; k < array.Length; k++)
-    {
-        if (array[k] < temp)
-        {
-            temp = array[k]; // рррррррррррррррррррр
-        }
-        // Console.WriteLine($"the min number is {temp}.");
-        // for (int l = 0; l < array.Length - 1; l++)
-        // {
+// int MinValueSort(int[] array)
+// {
+//     int index = 0;
+//     int temp = array[0];
+//     for (int k = 0; k < array.Length; k++)
+//     {
+//         if (array[k] < temp)
+//         {
+//             index = k;
+//             temp = array[k];
 
-        //     if (array[l] > temp)
-        //     {
-        //         array[l] = temp;
-        //     }
-        // }
-    }
-    return temp;
-}
+//         }
 
-int FindMinRaw(int[,] array)
-{
-    int[] minRawArray = new int[array.GetLength(0)];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        int temp = 0;
-        int[] jArray = new int[array.GetLength(1)];
+//     }
+//     return index;
+// }
 
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            jArray[j] = array[i, j];
-            temp = temp + jArray[j];
-            // Console.Write("temp " + temp + "|");
+// int FindMinRaw(int[,] array)
+// {
+//     int[] minRawArray = new int[array.GetLength(0)];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         int temp = 0;
+//         int[] jArray = new int[array.GetLength(1)];
 
-        }
-        minRawArray[i] = temp;
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             jArray[j] = array[i, j];
+//             temp = temp + jArray[j];
 
-    }
-    ShowArray(minRawArray);
-    MinValueSort(minRawArray);
-    // MinValueSort(minRawArray);
-    // Console.WriteLine();
-    ShowArray(minRawArray);
-    return MinValueSort(minRawArray);
-}
+//         }
+//         minRawArray[i] = temp;
+
+//     }
+//     // ShowArray(minRawArray); / показывает сумму
+//     return MinValueSort(minRawArray);
+// }
 
 
 
-Console.WriteLine("Input number of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number of colums: ");
-int columns = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input minimal value of array element");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input max value of array element");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
 
-int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
-Show2DArray(MyArray);
-Console.WriteLine();
-// Show2DArray(FindMinRaw(MyArray));
-// ShowArray(FindMinRaw(MyArray));
-Console.WriteLine(FindMinRaw(MyArray));
+// int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+// Show2DArray(MyArray);
+// Console.WriteLine();
+// Console.WriteLine($"The minimal sum in the {FindMinRaw(MyArray) + 1} row.");
 
 
 // __________________________________________________________________________________________________________________________________
@@ -245,6 +233,12 @@ Console.WriteLine(FindMinRaw(MyArray));
 // Результирующая матрица будет:
 // 18 20
 // 15 18
+
+// Решение
+
+
+
+// ___________________________________________________________________________________________________________________________________
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 // Массив размером 2 x 2 x 2
