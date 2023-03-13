@@ -20,16 +20,16 @@ void ShowArray(int[] array)
 int[] BubleSort(int[] array)
 {
     int temp = 0;
-    for (int j = 0; j < array.Length; j++)
+    for (int i = 0; i < array.Length; i++)
     {
-        for (int i = 0; i < array.Length - 1; i++)
+        for (int j = 0; j < array.Length - 1; j++)
         {
 
-            if (array[i] < array[i + 1])
+            if (array[j] < array[j + 1]) // sort in descending order "<"
             {
-                temp = array[i + 1];
-                array[i + 1] = array[i];
-                array[i] = temp;
+                temp = array[j + 1];
+                array[j + 1] = array[j];
+                array[j] = temp;
             }
         }
     }
