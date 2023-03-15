@@ -70,6 +70,74 @@
 
 //Решение.
 
+// int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+// {
+//     int[,] newArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+
+//         }
+//     }
+//     return newArray;
+
+// }
+
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// int[,] CheckNum(int rowPos, int columPos, int[,] array)
+// {
+//     if (rowPos > array.GetLength(0) || columPos > array.GetLongLength(1)) Console.WriteLine($"The index in the sector ({rowPos}, {columPos}) is absened.");
+//     else Console.WriteLine($"The index in the sector ({rowPos}, {columPos}) is {array[rowPos, columPos]}.");
+//     return array;
+// }
+
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+// Show2DArray(MyArray);
+
+// Console.WriteLine("Input position of row: ");
+// int rowPos = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input position of colum: ");
+// int columPos = Convert.ToInt32(Console.ReadLine());
+
+
+// CheckNum(rowPos, columPos, MyArray);
+
+// ______________________________________________________________________________________________________________________________
+
+// Задача 52.Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+// Решение.
+
 int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
 {
     int[,] newArray = new int[rows, columns];
@@ -85,63 +153,52 @@ int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
 
 }
 
-// void Show2DArray(int[,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             Console.Write(array[i, j] + " ");
-//         }
-//         Console.WriteLine();
-//     }
-//     Console.WriteLine();
-// }
-
-int[,] CheckNum(int entNum, int[,] array)
+void Show2DArray(int[,] array)
 {
-    int rowNum = 0;
-    int columNum = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[i, j] == entNum) Console.WriteLine(array[i, j]);
-            else Console.WriteLine("There is no number in array.");
+            Console.Write(array[i, j] + " ");
         }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+int[,] FindSum(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(1); i++)
+    {
+
+        double temp = 0;
+        for (int j = 0; j < array.GetLength(0); j++)
+        {
+
+            temp = array[j, i] + temp;
+
+        }
+        Console.WriteLine($"The sum of numbers in {i + 1} column is {temp}. ");
+        temp = Math.Round(temp / array.GetLength(0), 2);
+        Console.WriteLine($"The arithmetic mean of {i + 1} column is {temp}!");
     }
     return array;
 }
 
+Console.WriteLine("Input number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input number of colums: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input minimal value of array element");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input max value of array element");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
 
-// Console.WriteLine("Input number of rows: ");
-// int rows = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input number of colums: ");
-// int columns = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input minimal value of array element");
-// int minValue = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input max value of array element");
-// int maxValue = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input number of : ");
-// int entNum = Convert.ToInt32(Console.ReadLine());
+int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+Show2DArray(MyArray);
+FindSum(MyArray);
 
-// CheckNum(entNum, Create2DRandomArray);
 
-// int[,] array = Create2DRandomArray(columns, rows, maxValue, maxValue);
-
-// Show2DArray(array);
-// Show2DArray(Create2DRandomArray(columns, rows, minValue, maxValue));
-
-// ______________________________________________________________________________________________________________________________
-
-// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-
-// Например, задан массив:
-// 1 4 7 2
-// 5 9 2 3
-// 8 4 2 4
-// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
-
-//Решение.
 
 // ______________________________________________________________________________________________________________________________
