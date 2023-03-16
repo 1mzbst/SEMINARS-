@@ -236,10 +236,74 @@
 
 //Решение
 
-int[,] RevolveArray(int[,] array)
-{
-    int[,] revArray = new int[array.GetLength(1), array.GetLength(0)];
-}
+// int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+// {
+//     int[,] newArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+
+//         }
+//     }
+//     return newArray;
+
+// }
+
+// int[,] RevolveArray(int[,] array)
+// {
+//     // int[,] revAr = new int[6, 4];
+//     int agl1 = array.GetLength(1);
+//     int agl0 = array.GetLength(0);
+//     int[,] revArray = new int[agl1, agl0];
+//     for (int i = agl1 - 1; i == 0; i--)
+//     {
+
+//         for (int j = 0; j < agl0; j++)
+//         {
+//             revArray[j, i] = array[(agl1 - 1) - i, j];
+//             // revArray[j, i] = array[i, j];
+//             Console.Write(revArray[j, i] + " ");
+//         }
+
+//     }
+//     // revArray = revAr;
+//     return revArray;
+// }
+
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+// Show2DArray(MyArray);
+// // RevolveArray(MyArray);
+// Console.WriteLine();
+// Show2DArray(RevolveArray(MyArray));
+// // Console.WriteLine();
+// // Console.WriteLine($"The minimal sum in the {FindMinRaw(MyArray) + 1} row.");
+
 
 
 // _________________________________________________________________________________________________________________________
@@ -253,7 +317,72 @@ int[,] RevolveArray(int[,] array)
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
+
+
+
 // 01 02 03 04
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+//Решение
+
+// int[,] NumbersArray(int row, int column)
+// {
+//     int temp = 0;
+//     int n = 1;
+//     int[,] array = new int[row, column];
+//     for (int i = 0; i < 1; i++)
+//     {
+//         for (int j = 0; j < column; j++)
+//         {
+//             array[i, j] = n++;
+//             temp = j;
+//         }
+
+//         for (int q = 1; q < 4; q++)
+//         {
+//             array[q, column - 1] = n++;
+//             // array[column - 1, q] = n++;
+//         }
+
+//         for (int w = -2; w < 1; w++)
+//         {
+//             array[row - 1, w * (-1)] = n++;
+//         }
+
+//         for (int e = -2; e < 0; e++)
+//         {
+//             array[e * (-1), i] = n++;
+//         }
+
+//         for (int r = 1; r < 3; r++)
+//         {
+//             array[i + 1, r] = n++;
+//         }
+
+//         for (int t = -2; t < 0; t++)
+//         {
+//             array[i + 2, t * (-1)] = n++;
+//         }
+//     }
+
+//     return array;
+// }
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// int[,] MyArray = NumbersArray(4, 4);
+// Show2DArray(MyArray);
+
+// _________________________________________________________________________________________________________________________
