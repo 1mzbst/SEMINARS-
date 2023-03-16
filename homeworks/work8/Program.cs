@@ -236,12 +236,6 @@
 
 //Решение
 
-int[,] RevolveArray(int[,] array)
-{
-    int[,] revArray = new int[array.GetLength(1), array.GetLength(0)];
-}
-
-
 // _________________________________________________________________________________________________________________________
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
@@ -250,6 +244,63 @@ int[,] RevolveArray(int[,] array)
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
+
+//Решение
+
+// int[,,] Create3DRandomArray(int columnsX, int columnZ, int rows, int minValue, int maxValue)
+// {
+//     int[,,] newArray = new int[rows, columnsX, columnZ];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columnsX; j++)
+//         {
+//             for (int k = 0; k < columnZ; k++)
+//             {
+//                 newArray[i, j, k] = new Random().Next(minValue, maxValue + 1);
+
+//             }
+//         }
+//     }
+//     return newArray;
+
+// }
+
+// void Show3DArray(int[,,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < array.GetLength(2); k++)
+//             {
+//                 Console.Write($"{array[i, j, k]} {(i, j, k)} ");
+//             }
+//             Console.WriteLine();
+//         }
+//         // Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columsX: ");
+// int columnsX = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columsZ: ");
+// int columnsZ = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// int[,,] MyArray = Create3DRandomArray(columnsX, columnsZ, rows, minValue, maxValue);
+// Show3DArray(MyArray);
+
+
+
+// _________________________________________________________________________________________________________________________
+
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
