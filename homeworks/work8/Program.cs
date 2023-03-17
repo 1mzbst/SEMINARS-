@@ -226,6 +226,7 @@
 
 
 // _________________________________________________________________________________________________________________________
+
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 // Например, даны 2 матрицы:
 // 2 4 | 3 4
@@ -236,73 +237,98 @@
 
 //Решение
 
-int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
-{
-    int[,] newArray = new int[rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+// int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+// {
+//     int[,] newArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
 
-        }
-    }
-    return newArray;
+//         }
+//     }
+//     return newArray;
 
-}
+// }
 
-int[,] RevolveArray(int[,] array)
-{
-    // int[,] revAr = new int[6, 4];
-    int agl1 = array.GetLength(1);
-    int agl0 = array.GetLength(0);
-    int[,] revArray = new int[agl1, agl0];
-    for (int i = -array.GetLength(1) + 1; i < 1; i++)
-    {
+// int[,] Create2DRandomArray2(int columns2, int rows2, int minValue2, int maxValue2)
+// {
+//     int[,] newArray = new int[rows2, columns2];
+//     for (int i = 0; i < rows2; i++)
+//     {
+//         for (int j = 0; j < columns2; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue2, maxValue2 + 1);
 
-        for (int j = 0; j < agl0; j++)
-        {
-            revArray[j, i * (-1)] = array[i + (agl1 - 1), j];
-            // revArray[j, i] = array[i, j];
-            // Console.Write(revArray[j, i] + " ");
-        }
+//         }
+//     }
+//     return newArray;
 
-    }
-    // revArray = revAr;
-    return revArray;
-}
-
-void Show2DArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
+// }
 
 
-Console.WriteLine("Input number of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number of colums: ");
-int columns = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input minimal value of array element");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input max value of array element");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
 
-int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
-Show2DArray(MyArray);
-// RevolveArray(MyArray);
-Console.WriteLine();
-Show2DArray(RevolveArray(MyArray));
+
+// int[,] MultiplyArray(int[,] array, int[,] array2)
+// {
+//     int[,] array3 = new int[array.GetLength(0), array.GetLength(1)];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         int multy = 0;
+//         int sum = 0;
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             multy = array[i, j] * array2[j, i];
+//             array3[i, j] = array[i, j] * array2[j, i];
+//             sum = multy +
+//         }
+//     }
+// }
+
+
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine();
-// Console.WriteLine($"The minimal sum in the {FindMinRaw(MyArray) + 1} row.");
+
+// Console.WriteLine("Input number of rows: "2);
+// int rows2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums:2 ");
+// int columns2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal2 value of array element");
+// int minValue2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max val2ue of array element");
+// int maxValue2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+
+// int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+// Show2DArray(MyArray);
+// // RevolveArray(MyArray);
+// Console.WriteLine();
+// Show2DArray(RevolveArray(MyArray));
+// // Console.WriteLine();
+// // Console.WriteLine($"The minimal sum in the {FindMinRaw(MyArray) + 1} row.");
 
 
 
@@ -315,9 +341,63 @@ Show2DArray(RevolveArray(MyArray));
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
+//Решение
+
+// int[,,] Create3DRandomArray(int columnsX, int columnZ, int rows, int minValue, int maxValue)
+// {
+//     int[,,] newArray = new int[rows, columnsX, columnZ];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columnsX; j++)
+//         {
+//             for (int k = 0; k < columnZ; k++)
+//             {
+//                 newArray[i, j, k] = new Random().Next(minValue, maxValue + 1);
+
+//             }
+//         }
+//     }
+//     return newArray;
+
+// }
+
+// void Show3DArray(int[,,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < array.GetLength(2); k++)
+//             {
+//                 Console.Write($"{array[i, j, k]} {(i, j, k)} ");
+//             }
+//             Console.WriteLine();
+//         }
+//         // Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columsX: ");
+// int columnsX = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of columsZ: ");
+// int columnsZ = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// int[,,] MyArray = Create3DRandomArray(columnsX, columnsZ, rows, minValue, maxValue);
+// Show3DArray(MyArray);
+
+
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
 
+// _________________________________________________________________________________________________________________________
 
 
 // 01 02 03 04
