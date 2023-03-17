@@ -236,73 +236,73 @@
 
 //Решение
 
-// int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
-// {
-//     int[,] newArray = new int[rows, columns];
-//     for (int i = 0; i < rows; i++)
-//     {
-//         for (int j = 0; j < columns; j++)
-//         {
-//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+{
+    int[,] newArray = new int[rows, columns];
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            newArray[i, j] = new Random().Next(minValue, maxValue + 1);
 
-//         }
-//     }
-//     return newArray;
+        }
+    }
+    return newArray;
 
-// }
+}
 
-// int[,] RevolveArray(int[,] array)
-// {
-//     // int[,] revAr = new int[6, 4];
-//     int agl1 = array.GetLength(1);
-//     int agl0 = array.GetLength(0);
-//     int[,] revArray = new int[agl1, agl0];
-//     for (int i = agl1 - 1; i == 0; i--)
-//     {
+int[,] RevolveArray(int[,] array)
+{
+    // int[,] revAr = new int[6, 4];
+    int agl1 = array.GetLength(1);
+    int agl0 = array.GetLength(0);
+    int[,] revArray = new int[agl1, agl0];
+    for (int i = -array.GetLength(1) + 1; i < 1; i++)
+    {
 
-//         for (int j = 0; j < agl0; j++)
-//         {
-//             revArray[j, i] = array[(agl1 - 1) - i, j];
-//             // revArray[j, i] = array[i, j];
-//             Console.Write(revArray[j, i] + " ");
-//         }
+        for (int j = 0; j < agl0; j++)
+        {
+            revArray[j, i * (-1)] = array[i + (agl1 - 1), j];
+            // revArray[j, i] = array[i, j];
+            // Console.Write(revArray[j, i] + " ");
+        }
 
-//     }
-//     // revArray = revAr;
-//     return revArray;
-// }
+    }
+    // revArray = revAr;
+    return revArray;
+}
 
-// void Show2DArray(int[,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             Console.Write(array[i, j] + " ");
-//         }
-//         Console.WriteLine();
-//     }
-//     Console.WriteLine();
-// }
+void Show2DArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
 
 
-// Console.WriteLine("Input number of rows: ");
-// int rows = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input number of colums: ");
-// int columns = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input minimal value of array element");
-// int minValue = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input max value of array element");
-// int maxValue = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input number of colums: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input minimal value of array element");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input max value of array element");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+
+int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+Show2DArray(MyArray);
+// RevolveArray(MyArray);
+Console.WriteLine();
+Show2DArray(RevolveArray(MyArray));
 // Console.WriteLine();
-
-// int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
-// Show2DArray(MyArray);
-// // RevolveArray(MyArray);
-// Console.WriteLine();
-// Show2DArray(RevolveArray(MyArray));
-// // Console.WriteLine();
-// // Console.WriteLine($"The minimal sum in the {FindMinRaw(MyArray) + 1} row.");
+// Console.WriteLine($"The minimal sum in the {FindMinRaw(MyArray) + 1} row.");
 
 
 
@@ -382,7 +382,7 @@
 //     Console.WriteLine();
 // }
 
-// int[,] MyArray = NumbersArray(4, 4);
+// int[,] MyArray = NumbersArray(3, 3);
 // Show2DArray(MyArray);
 
 // _________________________________________________________________________________________________________________________
