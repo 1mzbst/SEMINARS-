@@ -247,56 +247,6 @@
 
 //Решение
 
-// int[,,] Create3DRandomArray(int columnsX, int columnZ, int rows, int minValue, int maxValue)
-// {
-//     int[,,] newArray = new int[rows, columnsX, columnZ];
-//     for (int i = 0; i < rows; i++)
-//     {
-//         for (int j = 0; j < columnsX; j++)
-//         {
-//             for (int k = 0; k < columnZ; k++)
-//             {
-//                 newArray[i, j, k] = new Random().Next(minValue, maxValue + 1);
-
-//             }
-//         }
-//     }
-//     return newArray;
-
-// }
-
-// void Show3DArray(int[,,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < array.GetLength(1); j++)
-//         {
-//             for (int k = 0; k < array.GetLength(2); k++)
-//             {
-//                 Console.Write($"{array[i, j, k]} {(i, j, k)} ");
-//             }
-//             Console.WriteLine();
-//         }
-//         // Console.WriteLine();
-//     }
-//     Console.WriteLine();
-// }
-
-// Console.WriteLine("Input number of rows: ");
-// int rows = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input number of columsX: ");
-// int columnsX = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input number of columsZ: ");
-// int columnsZ = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input minimal value of array element");
-// int minValue = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input max value of array element");
-// int maxValue = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine();
-
-// int[,,] MyArray = Create3DRandomArray(columnsX, columnsZ, rows, minValue, maxValue);
-// Show3DArray(MyArray);
-
 
 
 // _________________________________________________________________________________________________________________________
