@@ -237,105 +237,102 @@
 
 //Решение
 
-int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
-{
-    int[,] newArray = new int[rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+// int[,] Create2DRandomArray(int columns, int rows, int minValue, int maxValue)
+// {
+//     int[,] newArray = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue, maxValue + 1);
 
-        }
-    }
-    return newArray;
+//         }
+//     }
+//     return newArray;
 
-}
+// }
 
-int[,] Create2DRandomArray2(int columns2, int rows2, int minValue2, int maxValue2)
-{
-    int[,] newArray = new int[rows2, columns2];
-    for (int i = 0; i < rows2; i++)
-    {
-        for (int j = 0; j < columns2; j++)
-        {
-            newArray[i, j] = new Random().Next(minValue2, maxValue2 + 1);
+// int[,] Create2DRandomArray2(int columns2, int rows2, int minValue2, int maxValue2)
+// {
+//     int[,] newArray = new int[rows2, columns2];
+//     for (int i = 0; i < rows2; i++)
+//     {
+//         for (int j = 0; j < columns2; j++)
+//         {
+//             newArray[i, j] = new Random().Next(minValue2, maxValue2 + 1);
 
-        }
-    }
-    return newArray;
+//         }
+//     }
+//     return newArray;
 
-}
-
-
+// }
 
 
-int[,] MultiplyArray(int[,] array, int[,] array2)
-{
-    int[,] array3 = new int[array.GetLength(0), array.GetLength(1)];
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
 
 
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            int multy = 0;
-            int sum = 0;
-            for (int k = 0; k < array2.GetLongLength(0) - 1; k++)
-            {
-                multy = array[i, k] * array2[k, j];
-                sum = sum + multy;
-            }
-            array3[i, j] = sum;
-        }
-    }
-    return array3;
-}
+// int[,] MultiplyArray(int[,] array, int[,] array2)
+// {
+//     int[,] array3 = new int[array.GetLength(0), array2.GetLength(1)];
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
 
 
-void Show2DArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i, j] + " ");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
+//         for (int j = 0; j < array2.GetLength(1); j++)
+//         {
+//             int multy = 0;
+//             int sum = 0;
+//             for (int k = 0; k < array.GetLongLength(1); k++)
+//             {
+//                 multy = array[i, k] * array2[k, j];
+//                 sum = sum + multy;
+//             }
+//             array3[i, j] = sum;
+//         }
+//     }
+//     return array3;
+// }
 
 
-Console.WriteLine("Input number of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number of colums: ");
-int columns = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input minimal value of array element");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input max value of array element");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
-
-Console.WriteLine("Input number of rows2: ");
-int rows2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number of colums: ");
-int columns2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input minimal2 value of array element");
-int minValue2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input max value of array element");
-int maxValue2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
+// void Show2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
 
 
-int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
-int[,] MyArray2 = Create2DRandomArray2(columns2, rows2, minValue2, maxValue2);
-Show2DArray(MyArray);
-Console.WriteLine();
-Show2DArray(MyArray2);
-Console.WriteLine();
-Show2DArray(MultiplyArray(MyArray, MyArray2));
-// Console.WriteLine($"The minimal sum in the {FindMinRaw(MyArray) + 1} row.");
+// Console.WriteLine("Input number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal value of array element");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+// Console.WriteLine("Input number of rows2: ");
+// int rows2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input number of colums2: ");
+// int columns2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input minimal2 value of array element");
+// int minValue2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input max value of array element");
+// int maxValue2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
+
+
+// int[,] MyArray = Create2DRandomArray(columns, rows, minValue, maxValue);
+// int[,] MyArray2 = Create2DRandomArray2(columns2, rows2, minValue2, maxValue2);
+// Show2DArray(MyArray);
+// Show2DArray(MyArray2);
+// Show2DArray(MultiplyArray(MyArray, MyArray2));
 
 
 
