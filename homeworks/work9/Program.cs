@@ -6,20 +6,18 @@
 
 //Решение
 
-void ShowNumbers(int n)
-{
-    int a = 0;
-    if (a != n)
-    {
+// void ShowNumbers(int n, int one);
+// {
+//     // int one = 1;
+//     if (one != n)
+//     {
+//         ShowNumbers(n, one + 1);
+//         Console.Write(n + " ");
+//     }
 
-        ShowNumbers(a = a + 1);
-        Console.WriteLine(n + " ");
+// }
+// ShowNumbers(5, 1);
 
-    }
-
-}
-
-ShowNumbers(5);
 
 // _____________________________________________________________________________________________________________________
 
@@ -30,6 +28,18 @@ ShowNumbers(5);
 // M = 4; N = 8. -> 30
 
 //Решение
+// int sum = 0;
+
+// void SumInDeap(int m, int n)
+// {
+//     if (m <= n)
+//     {
+//         sum = sum + m;
+//         SumInDeap(m + 1, n);
+//     }
+// }
+// SumInDeap(4, 8);
+// Console.WriteLine(sum);
 
 // _____________________________________________________________________________________________________________________
 
@@ -38,5 +48,15 @@ ShowNumbers(5);
 // m = 3, n = 2 -> A(m,n) = 29
 
 //Решение
+
+// int Akkerman(int m, int n)
+// {
+//     if (m == 0) return n + 1;
+//     if (m != 0 && n == 0) return Akkerman(m - 1, 1);
+//     if (m > 0 && n > 0) return Akkerman(m - 1, Akkerman(m, n - 1));
+//     return Akkerman(n, m);
+// }
+
+// Console.WriteLine($"{Akkerman(2, 3)}");
 
 // _____________________________________________________________________________________________________________________
