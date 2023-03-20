@@ -5,7 +5,7 @@
 
 // void ShowNumbers(int n)
 // {
-//     if (n >= 1)
+//     if (n > 1);
 //     {
 //         ShowNumbers(n - 1);
 //         Console.Write(n + " ");

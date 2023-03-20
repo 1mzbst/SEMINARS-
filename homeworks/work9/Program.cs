@@ -6,18 +6,19 @@
 
 //Решение
 
-// void ShowNumbers(int n, int one);
+// void ShowNumbers(int n, int stop)
 // {
-//     // int one = 1;
-//     if (one != n)
+//     if (stop <= n)
 //     {
-//         ShowNumbers(n, one + 1);
-//         Console.Write(n + " ");
+
+//         ShowNumbers(n, stop + 1);
+//         Console.Write(stop + " ");
+
 //     }
 
 // }
-// ShowNumbers(5, 1);
 
+// ShowNumbers(5, 1);
 
 // _____________________________________________________________________________________________________________________
 
