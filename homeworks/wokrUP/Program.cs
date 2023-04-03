@@ -52,3 +52,16 @@
 //     // revArray = revAr;
 //     return revArray;
 
+// Console.WriteLine("Enter the size ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// string[] nstring = new string[size];
+string[] nstring = { "zero", "one", "two", "three", "four" };
+
+void ShowArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine(array[i] + " ");
+    }
+}
+ShowArray(nstring);
